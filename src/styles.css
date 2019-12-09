@@ -42,3 +42,8 @@ app-commit-details{
     z-index: 99999;
 
 }
+@media screen and (max-width: 1170px) {
+	.flex-list-component{
+		min-width: 40%;
+	}
+}
