@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
-import { RepositoriesModel } from './models/models';
+import { RepositoriesModel, CommitsModel } from './models/models';
 
 @Injectable({providedIn: 'root'})
 export class AppService {
 	constructor(private httpClient: HttpClient) { }
 	
 	public repositoriesList:BehaviorSubject<RepositoriesModel> = new BehaviorSubject<RepositoriesModel>(null);
-	public commitList:BehaviorSubject<any> = new BehaviorSubject<any>(null);
+	public commitList:BehaviorSubject<CommitsModel> = new BehaviorSubject<CommitsModel>(null);
 	public commitListRepoName:string;
 
 	async getListOfTop100StarredRepositories(){
