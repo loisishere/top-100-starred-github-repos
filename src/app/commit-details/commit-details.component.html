@@ -1,0 +1,15 @@
+<span class="close" (click)="close()">close X</span>
+<h1>commits in the last 24 hours for: {{service.commitListRepoName}}</h1>
+<div class="no-commits" *ngIf="service.commitList.getValue().items.length === 0">There have been no commits made in the last 24 hours</div>
+<div class="flex-list">
+		<div class="flex-list-component" *ngFor="let list of service.commitList.getValue().items">
+				<h1>{{list.commit.author.name}}</h1>
+				<div class="flex-image-container">
+					<img [src]="list.author.avatar_url" alt="" width="150" height="150" />
+				</div>	
+				<p>Message: {{list.commit.message}}</p>
+				<div class="star-count">
+					Date: <strong>{{list.commit.committer.date | date: 'short'}}</strong>
+				</div>
+		</div>
+	</div>

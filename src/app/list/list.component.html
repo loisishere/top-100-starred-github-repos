@@ -1,0 +1,16 @@
+<div class="flex-list">
+	<div class="flex-list-component" *ngFor="let list of service.repositoriesList.getValue().items">
+			<h1>{{list.name}}</h1>
+			<div class="flex-image-container">
+				<img [src]="list.owner.avatar_url" alt="" width="150" height="150" />
+			</div>
+			<span class="follow-html-link">
+				<a class="repo-link" [href]="list.html_url">{{list.html_url}}</a>
+			</span>
+			<p>Description: {{list.description}}</p>
+			<div class="star-count">
+				Star Count: <strong>{{list.stargazers_count | number: '1.0-0'}}</strong>
+			</div>
+			<a (click)="getMoreInfoOnCommitsForThisRepo(list.full_name)" class="commits-details-link">commit details</a>
+	</div>
+</div>

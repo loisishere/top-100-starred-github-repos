@@ -1,0 +1,44 @@
+.flex-list{ 
+	display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 300px;
+    width: 100%;
+    flex-wrap: wrap;
+	flex-direction: row;
+}
+.flex-list-component{
+    min-width: 20%;
+    margin: 10px;
+    padding: 20px 30px;
+    background-color: #ebf2f8;
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 2%;
+}
+
+.flex-image-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+}
+h1{
+	text-align: center;
+}
+
+app-commit-details{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    background-color: rgba(255,255,255,.95);
+    display: block;
+    z-index: 99999;
+
+}

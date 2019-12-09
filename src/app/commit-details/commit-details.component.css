@@ -1,0 +1,23 @@
+span.close {
+	margin: 10px;
+    width: auto;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: crimson;
+    text-decoration: underline;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+div.no-commits{
+	display: flex;
+	justify-content: center;
+    font-weight: bold;
+    color: darkblue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
